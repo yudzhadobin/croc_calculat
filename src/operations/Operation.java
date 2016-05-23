@@ -1,6 +1,5 @@
-/**
- * Created by yudzh_000 on 18.05.2016.
- */
+package operations;
+
 public interface Operation {
 
     Fraction calculate(Fraction a, Fraction b);

@@ -9,11 +9,14 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import operations.Calculator;
+import operations.ErrorInInput;
+import operations.Fraction;
 import  org.w3c.dom.Document;
 
 
 
-public class main {
+public class Main {
 
     public static void main(String[] args) {
         if (args.length != 0) {
@@ -30,7 +33,11 @@ public class main {
         String input;
         try {
             while (!(input = scanner.nextLine()).isEmpty()) {
-                System.out.println(input + " = " + calculator.calculate(tokenizer.tokenize(input)));
+                try {
+                    System.out.println(input + " = " + calculator.calculate(tokenizer.tokenize(input)));
+                } catch (ErrorInInput e) {
+                    System.out.println(e.getMessage());
+                }
             }
         }
         catch (NoSuchElementException ex) {

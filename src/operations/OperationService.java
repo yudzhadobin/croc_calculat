@@ -1,3 +1,7 @@
+package operations;
+
+import operations.*;
+
 /**
  * Created by yudzh_000 on 18.05.2016.
  */
@@ -14,7 +18,7 @@ public class OperationService {
             case "/":
                 return new Divide();
             default:
-                throw new ErrorInInput();
+                throw new ErrorInInput("error in input");
         }
     }
 }

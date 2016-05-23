@@ -1,8 +1,14 @@
+package operations;
+
 /**
- * Created by yudzh_000 on 18.05.2016.
+ *  Class represents operation minus
  */
 public class Minus implements Operation {
 
+
+    /**
+     *  Class represents operation minus for two fractions
+     */
     @Override
     public Fraction calculate(Fraction a, Fraction b) {
         calculateDenominator(a, b);

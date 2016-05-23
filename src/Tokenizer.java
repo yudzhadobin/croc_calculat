@@ -1,3 +1,5 @@
+import operations.ErrorInInput;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,6 +27,9 @@ public class Tokenizer {
         }
         if(builder.length() != 0) {
             result.add(builder.toString());
+        }
+        if(result.size() != 6) {
+            throw new ErrorInInput("invalid input " + input);
         }
         return result;
     }
